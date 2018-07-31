@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\Center\Desktop\ChairGenerator.v4p" scrollx="0" scrolly="0" systemname="ChairGenerator" filename="C:\Users\Center\Desktop\ChairGenerator.v4p">
-   <BOUNDS type="Window" left="9210" top="3075" width="18765" height="12495">
+   <PATCH nodename="C:\Users\Center\Desktop\vvvv-samples\ChairField\ChairGenerator.v4p" scrollx="0" scrolly="0" systemname="ChairGenerator" filename="C:\Users\Center\Desktop\ChairGenerator.v4p">
+   <BOUNDS type="Window" left="1830" top="675" width="19290" height="12495">
    </BOUNDS>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="4755" top="10260" width="3420" height="270">
@@ -20,6 +20,8 @@
    <PIN pinname="Layer 14" visible="1">
    </PIN>
    <PIN pinname="Layer 6" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="6">
@@ -251,7 +253,7 @@
    </PIN>
    <PIN pinname="Enabled" visible="1">
    </PIN>
-   <PIN pinname="Transform" visible="1">
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="0.6">
    </PIN>
@@ -761,7 +763,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="17400" top="7395" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1113,5 +1115,25 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="70" srcpinname="Output" dstnodeid="8" dstpinname="Diffuse Color">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="71">
+   <BOUNDS type="Box" left="17970" top="9810" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="17970" top="9810" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Enabled">
    </LINK>
    </PATCH>
